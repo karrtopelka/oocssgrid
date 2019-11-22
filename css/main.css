@@ -6,7 +6,7 @@ body {
 .grid {
     /* height: 100vh; */
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 10px;
     grid-template-areas: "header"
         "article"
         "aside"
