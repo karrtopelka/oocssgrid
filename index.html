@@ -6,36 +6,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Науково-інноваційна фірма "Роги та Копита"</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <div class="grid">
-        <header>
-            <a href="#default" class="logo">Deer</a>
-            <p>Науково-інноваційна фірма "Роги та Копита"</p>
-            <div class="header-right">
-                <a class="active" href="#home">Home</a>
-                <a href="#about">Про Нас</a>
-                <a href="#production">Продукція</a>
-                <a href="#work">Послуги</a>
-                <a href="#clients">Наші клієнти</a>
-                <a href="#contact">Контакти</a>
-            </div>
-        </header>
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <a class="active" href="#home"><li>Home</li></a>
+                <a href="#about"><li>Про Нас</li></a>
+                <a href="#production"><li>Продукція</li></a>
+                <a href="#work"><li>Послуги</li></a>
+                <a href="#clients"><li>Наші клієнти</li></a>
+                <a href="#contact"><li>Контакти</li></a>
+            </ul>
+        </div>
+    </nav>
+    <main class="wrapper">
+        <section class="header">
+            <h1>Роги та Копита</h1>
+            <article>
+                <p>Науково-інноваційна фірма "Роги та Копита".<br>Розміри оленів, що відносяться до різних підвидів, різко різняться.<br>Вітаємо Вас на нашому сайті!</p>
+            </article>
+        </section>
+        <section class="deers" id="deers">
+            <ul>
+                <li>
+                    <figure>
+                        <img src="img/1.jpg" alt="Гірний олень">
+                        <figcaption>
+                            <h3>Sulcus intercruralis</h3>
+                        </figcaption>
+                    </figure>
+                    <p>
+                        Бічні частини стрілки і Заворотний частини стінки утворюють з кожного боку бічні стрілочні борозенки
+                    </p>
+                    <a href="#">Більше</a>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/2.jpg" alt="Гірний олень">
+                        <figcaption>
+                            <h3>Stratum coronarium</h3>
+                        </figcaption>
+                    </figure>
+                    <p>
+                        Вінцевий ріг в більшості випадків пігментований; тільки його більш глибокі шари позбавлені пігменту
+                    </p>
+                    <a href="#">Більше</a>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/3.jpg" alt="Гірний олень">
+                        <figcaption>
+                            <h3>Stratum lamellatum</h3>
+                        </figcaption>
+                    </figure>
+                    <p>
+                        Нижні кінці рогових листочків можна виявити з боку підошовної поверхні копита у вигляді білої (злегка жовтуватою) смуги
+                    </p>
+                    <a href="#">Більше</a>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/4.jpg" alt="Гірний олень">
+                        <figcaption>
+                            <h3>Solea ungulae</h3>
+                        </figcaption>
+                    </figure>
+                    <p>
+                        Основа шкіри підошви, що має сосочки, внутрішнім шаром зростається з периостом копитної кістки, виробляє шар епідермісу продукує трубчастий ріг
+                    </p>
+                    <a href="#">Більше</a>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/5.jpg" alt="Гірний олень">
+                        <figcaption>
+                            <h3>Pulvinus digitalis</h3>
+                        </figcaption>
+                    </figure>
+                    <p>
+                        В області копитної стрілки розрізняють наступні шари: епідерміс з роговим шаром, основу шкіри і підшкірний шар.
+                    </p>
+                    <a href="#">Більше</a>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/oleni2.jpg" alt="Гірний олень">
+                        <figcaption>
+                            <h3>Cusufu sucuft</h3>
+                        </figcaption>
+                    </figure>
+                    <p>
+                        Заворотний частини стінки утворюють з кожного боку бічні стрілочні борозенки останні нерідко служать місцем проникнення сторонніх тіл
+                    </p>
+                    <a href="#">Більше</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <aside>
+        <h1>Новини</h1>
         <article>
-            <p>Вітаємо Вас на нашому сайті !</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ea sit quae ducimus itaque pariatur amet
-                repellendus nesciunt error natus quasi esse impedit, consectetur quibusdam.</p>
+            <ul>
+                <li><a href="#">05.2011 Розроблено нову унікальну форму підкови</a></li>
+                <li><a href="#">11.2010 Семінар для користувачів нашої продукції</a></li>
+            </ul>
         </article>
+        
+    </aside>
+    <footer>
+        <p>©2019 Основи Веб-технологій. Всі права застережено</p>
+        <p>Made with ❤ by Karrtopelka</p>
+    </footer>
+
+
+
+    <!-- <div class="grid-layout">
+        <header id="pageHeader">
+            <img src="img/bull_logo.png" alt="bull_logo">
+            <p>Науково-інноваційна фірма "Роги та Копита"</p>
+        </header>
+        <article id="mainArticle">
+            <div class="head">
+                <img src="img/oleni.jpg" alt="Deer">
+                <p>Вітаємо Вас на нашому сайті !</p>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste officia minima perferendis reiciendis eum
+                expedita sed est dolores soluta iusto obcaecati laboriosam, alias amet tenetur vero suscipit facilis
+                ullam quasi nesciunt ad error molestias. Natus ea, beatae explicabo tempora totam incidunt similique
+                labore inventore sunt autem consequuntur deserunt aperiam in error aliquid vitae quaerat perferendis,
+                odit, fugiat illo neque dolorem. Ducimus nostrum maiores, voluptas modi debitis voluptatibus amet saepe
+                a molestias perferendis. Molestiae, doloremque minima.</p>
+        </article>
+        <nav id="mainNav">
+            <a class="active" href="#home">Home</a>
+            <a href="#about">Про Нас</a>
+            <a href="#production">Продукція</a>
+            <a href="#work">Послуги</a>
+            <a href="#clients">Наші клієнти</a>
+            <a href="#contact">Контакти</a></nav>
+        <aside id="siteAds">
+            <ul>
+                <li><a href="#">05.2011 Розроблено нову унікальну форму підкови</a></li>
+                <li><a href="#">11.2010 Семінар для користувачів нашої продукції</a></li>
+            </ul>
+        </aside>
+        <footer id="pageFooter">
+            <p>©2019, Основи Веб-технологій. Всі права застережено.</p>
+            <p>Made with 💜 by Karrtopelka</p>
+        </footer>
+    </div> -->
+
+
+
+    <!-- <div class="container">
+        <header>
+            <a href="#default" class="logo"><img src="img/bull_logo.png" alt="bull_logo"></a>
+            <p>Науково-інноваційна фірма "Роги та Копита"</p>
+        </header>
+
+        <nav>
+            <a class="active" href="#home">Home</a>
+            <a href="#about">Про Нас</a>
+            <a href="#production">Продукція</a>
+            <a href="#work">Послуги</a>
+            <a href="#clients">Наші клієнти</a>
+            <a href="#contact">Контакти</a>
+        </nav>
+
+        <main>
+            <div class="image">
+                <img src="img/oleni.jpg" alt="Deer">
+                <p>Вітаємо Вас на нашому сайті !</p>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste officia minima perferendis reiciendis eum
+                expedita sed est dolores soluta iusto obcaecati laboriosam, alias amet tenetur vero suscipit facilis
+                ullam quasi nesciunt ad error molestias. Natus ea, beatae explicabo tempora totam incidunt similique
+                labore inventore sunt autem consequuntur deserunt aperiam in error aliquid vitae quaerat perferendis,
+                odit, fugiat illo neque dolorem. Ducimus nostrum maiores, voluptas modi debitis voluptatibus amet saepe
+                a molestias perferendis. Molestiae, doloremque minima.</p>
+        </main>
+
         <aside>
             <ul>
                 <li><a href="#">05.2011 Розроблено нову унікальну форму підкови</a></li>
                 <li><a href="#">11.2010 Семінар для користувачів нашої продукції</a></li>
             </ul>
         </aside>
-        <footer>©2019, Основи Веб-технологій. Всі права застережено. Made with 💜 by Karrtopelka</footer>
-    </div>
     <script src="js/app.js"></script>
 </body>
 
