@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,700&display=swap&subset=cyrillic');
 
 body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f2;
-    font-family: 'Merriweather', serif;
+    font-family: 'Noto Serif SC', serif;
     font-weight: 400;
 }
 
@@ -27,6 +27,10 @@ a:hover {
     color: tomato;
 }
 
+.wrapper {
+    height: 100%;
+}
+
 .header {
     background: url('../img/background-header.jpg') center;
     background-size: cover;
@@ -42,13 +46,17 @@ a:hover {
 }
 
 .header > article > p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 200;
 }
 
 .header > article > a {
     padding: 1rem;
     margin-top: .75rem;
+}
+
+.nav-phone {
+    display: none;
 }
 
 .menu {
@@ -79,8 +87,8 @@ a:hover {
 }
 
 #menu li {
-    font-size: 1.5rem;
-    color: black;
+    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
 }
 
 #menu li:hover {
@@ -103,8 +111,16 @@ a:hover {
     opacity: .7;
 }
 
+.nav-phone {
+    display: none;
+}
+
+#menu-phone {
+    display: none;
+}
+
 .aside {
-    padding: 1rem 0;
+    padding: .4rem 0;
     background-color: #ebebec;
 }
 
@@ -115,13 +131,21 @@ a:hover {
 }
 
 .marquee span {
-    line-height: 1.2em;
+    line-height: 1.5rem;
     display: inline-block;
-    color: black;
-    font-size: 1.2em;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
     padding-left: 100%;
     -webkit-animation: marquee 14s infinite linear;
     animation: marquee 14s infinite linear;
+}
+
+.marquee span:hover {
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused;
+    animation-play-state:paused;
+    cursor: pointer;
 }
 
 @-webkit-keyframes marquee {
@@ -224,12 +248,120 @@ footer p {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
-    aside {
+    .nav-phone {
+        display: inherit;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #menuToggle {
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 40px;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+        -webkit-touch-callout: none;
+    }
+
+    #menuToggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #cdcdcd;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    #menuToggle input:checked~span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+    }
+
+    #menuToggle input:checked~span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    #menuToggle input:checked~span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    #menu-phone {
+        display: inherit;
+        position: absolute;
+        width: 300px;
+        margin: -100px 0 0 -50px;
+        padding: 50px;
+        padding-top: 125px;
+        background-color: #f0f0f2;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu-phone li {
+        padding: 10px 0;
+        font-size: 1.5rem;
+        color: black;
+    }
+
+    #menu-phone li:hover {
+        color: tomato;
+    }
+
+    #menuToggle input:checked~ul {
+        transform: none;
+    }
+
+    #menu-phone a {
+        background-color: transparent;
+    }
+
+    .aside {
         margin: 0;
         padding: 1rem 1rem;
     }
 
-    aside a {
+    .aside a {
         text-align: left;
         font-size: 1em;
     }
