@@ -25,109 +25,12 @@ a {
 
 a:hover {
     color: tomato;
-    /* opacity: .6; */
-}
-
-#menuToggle {
-    display: block;
-    position: absolute;
-    top: 25px;
-    left: 40px;
-    z-index: 1;
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-#menuToggle input {
-    display: block;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 2;
-    -webkit-touch-callout: none;
-}
-
-#menuToggle span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-    background: #cdcdcd;
-    border-radius: 3px;
-    z-index: 1;
-    transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-        opacity 0.55s ease;
-}
-
-#menuToggle span:first-child {
-    transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2) {
-    transform-origin: 0% 100%;
-}
-
-#menuToggle input:checked~span {
-    opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
-    background: #232323;
-}
-
-#menuToggle input:checked~span:nth-last-child(3) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-#menuToggle input:checked~span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(0, -1px);
-}
-
-#menu {
-    position: absolute;
-    width: 300px;
-    margin: -100px 0 0 -50px;
-    padding: 50px;
-    padding-top: 125px;
-    background-color: #f0f0f2;
-    border-radius: 0 0 23% 0;
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-    display: flex;
-    flex-direction: column;
-}
-
-#menu li {
-    padding: 10px 0;
-    font-size: 1.5rem;
-    color: black;
-}
-
-#menu li:hover {
-    color: tomato;
-}
-
-#menuToggle input:checked~ul {
-    transform: none;
-}
-
-#menu a {
-    background-color: transparent;
 }
 
 .header {
     background: url('../img/background-header.jpg') center;
     background-size: cover;
-    padding: 4rem 5rem;
+    padding: 4rem 8rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     align-items: center;
@@ -139,7 +42,7 @@ a:hover {
 }
 
 .header > article > p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 200;
 }
 
@@ -161,8 +64,88 @@ a:hover {
     border-radius: 4px;
 }
 
+.menu {
+    padding: 1rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c6aa9c36;
+}
+
+#menu {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+#menu li {
+    font-size: 1.5rem;
+    color: black;
+}
+
+#menu li:hover {
+    color: tomato;
+}
+
+#menuToggle input:checked~ul {
+    transform: none;
+}
+
+#menu a {
+    background-color: transparent;
+}
+
+#menu .active-li {
+    color: tomato !important;
+}
+
+#menu .active-li:hover {
+    opacity: .7;
+}
+
+.aside {
+    padding: 1rem 0;
+    background-color: #ebebec;
+}
+
+.marquee {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.marquee span {
+    line-height: 1.2em;
+    display: inline-block;
+    color: black;
+    font-size: 1.2em;
+    padding-left: 100%;
+    -webkit-animation: marquee 14s infinite linear;
+    animation: marquee 14s infinite linear;
+}
+
+@-webkit-keyframes marquee {
+    0% {
+        -webkit-transform: translate(0, 0);
+    }
+
+    100% {
+        -webkit-transform: translate(-100%, 0);
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0)
+    }
+}
+
 .deers {
-    padding: 2rem;
+    padding: 1rem 2rem 2rem 2rem;
 }
 
 .deers > ul {
@@ -211,28 +194,6 @@ a:hover {
 .deers > ul > li > a {
     padding: .5rem 1rem;
     margin: .5rem;
-}
-
-aside {
-    margin: 0 1em 0 1em;
-    padding: 1rem 5rem;
-    display: flex;
-    flex-direction: column;
-    background-color: #ebebec;
-}
-
-aside h1 {
-    font-size: 3rem;
-    padding-bottom: 1rem;
-}
-
-aside a {
-    background-color: transparent;
-    color: black;
-    text-align: center;
-    padding: 0.5em 1em 0.5em 1em;
-    font-size: 1.2em;
-    border-radius: 4px;
 }
 
 footer {
