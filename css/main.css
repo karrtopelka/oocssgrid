@@ -232,6 +232,12 @@ footer p {
     padding: .25em 0 .25em 0;
 }
 
+@media all and (max-width: 1920px){
+	#menu {
+		grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+	}
+}
+
 @media all and (max-width: 500px) {
     .header {
         padding: 5rem 2rem 1rem 2rem;
