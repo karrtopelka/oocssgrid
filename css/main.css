@@ -40,17 +40,17 @@ a:hover {
     align-items: center;
 }
 
-.header > h1 {
+.header>h1 {
     font-size: 3rem;
     padding-bottom: 1rem;
 }
 
-.header > article > p {
+.header>article>p {
     font-size: 1.2rem;
     font-weight: 200;
 }
 
-.header > article > a {
+.header>article>a {
     padding: 1rem;
     margin-top: .75rem;
 }
@@ -140,10 +140,10 @@ a:hover {
 }
 
 .marquee span:hover {
-    -webkit-animation-play-state:paused;
-    -moz-animation-play-state:paused;
-    -o-animation-play-state:paused;
-    animation-play-state:paused; 
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
     cursor: pointer;
 }
 
@@ -171,18 +171,18 @@ a:hover {
     padding: 1rem 2rem 2rem 2rem;
 }
 
-.deers > ul {
+.deers>ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     grid-gap: 1rem;
 }
 
-.deers > ul > li {
+.deers>ul>li {
     border: 1px solid #E2E2E2;
     border-radius: .5rem;
 }
 
-.deers > ul > li > figure {
+.deers>ul>li>figure {
     max-height: 220px;
     overflow: hidden;
     border-top-left-radius: .5rem;
@@ -190,31 +190,31 @@ a:hover {
     position: relative;
 }
 
-.deers > ul > li > figure > img {
+.deers>ul>li>figure>img {
     width: 100%;
 }
 
-.deers > ul > li > figure > figcaption {
+.deers>ul>li>figure>figcaption {
     position: absolute;
     bottom: 0;
     background-color: rgba(0, 0, 0, .7);
     width: 100%;
 }
 
-.deers > ul > li > figure > figcaption > h3 {
+.deers>ul>li>figure>figcaption>h3 {
     color: white;
     padding: .75rem;
     font-size: 1.25rem;
 }
 
-.deers > ul > li > p {
+.deers>ul>li>p {
     font-size: 1rem;
     line-height: 1.5;
     padding: 1rem .75rem;
     color: #666666;
 }
 
-.deers > ul > li > a {
+.deers>ul>li>a {
     padding: .5rem 1rem;
     margin: .5rem;
 }
@@ -231,32 +231,7 @@ footer p {
     padding: .25em 0 .25em 0;
 }
 
-<<<<<<< HEAD
 @media all and (max-width: 810px) {
-=======
-@media all and (max-width: 1920px){
-	#menu {
-		grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-	}
-}
-
-@media all and (max-width: 500px) {
-    .header {
-        padding: 5rem 2rem 1rem 2rem;
-    }
-
-    .header article > p {
-        padding-top: 1rem;
-        font-size: 1.1em;
-        color: rgb(238, 238, 238);
-    }
-
-    .deers>ul {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
->>>>>>> d3c162bd9f765353c0ff1372bbb2a663822779a5
     .nav-phone {
         display: inherit;
     }
@@ -371,7 +346,7 @@ footer p {
         padding: 5rem 2rem 1rem 2rem;
     }
 
-    .header article > p {
+    .header article>p {
         padding-top: 1rem;
         font-size: 1.1em;
         color: rgb(238, 238, 238);
