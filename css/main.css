@@ -69,7 +69,6 @@ a:hover {
     text-align: center;
     padding: 0.5em 1em 0.5em 1em;
     font-size: 1.5em;
-    border-radius: 4px;
 }
 
 .menu {
@@ -82,8 +81,8 @@ a:hover {
 
 #menu {
     width: 100vw;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    justify-content: space-around;
 }
 
 #menu li {
@@ -232,22 +231,7 @@ footer p {
     padding: .25em 0 .25em 0;
 }
 
-@media all and (max-width: 500px) {
-    .header {
-        padding: 5rem 2rem 1rem 2rem;
-    }
-
-    .header article > p {
-        padding-top: 1rem;
-        font-size: 1.1em;
-        color: rgb(238, 238, 238);
-    }
-
-    .deers>ul {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
+@media all and (max-width: 810px) {
     .nav-phone {
         display: inherit;
     }
@@ -354,6 +338,23 @@ footer p {
 
     #menu-phone a {
         background-color: transparent;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .header {
+        padding: 5rem 2rem 1rem 2rem;
+    }
+
+    .header article > p {
+        padding-top: 1rem;
+        font-size: 1.1em;
+        color: rgb(238, 238, 238);
+    }
+
+    .deers>ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
     .aside {
