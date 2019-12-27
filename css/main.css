@@ -231,7 +231,32 @@ footer p {
     padding: .25em 0 .25em 0;
 }
 
+<<<<<<< HEAD
 @media all and (max-width: 810px) {
+=======
+@media all and (max-width: 1920px){
+	#menu {
+		grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+	}
+}
+
+@media all and (max-width: 500px) {
+    .header {
+        padding: 5rem 2rem 1rem 2rem;
+    }
+
+    .header article > p {
+        padding-top: 1rem;
+        font-size: 1.1em;
+        color: rgb(238, 238, 238);
+    }
+
+    .deers>ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+>>>>>>> d3c162bd9f765353c0ff1372bbb2a663822779a5
     .nav-phone {
         display: inherit;
     }
